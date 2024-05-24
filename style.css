@@ -1,0 +1,131 @@
+:root {
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    --secondary-very-dark-blue: hsl(234, 12%, 34%);
+    --secondary-grayish-blue: hsl(229, 6%, 66%);
+    --secondary-very-light-gray: hsl(0, 0%, 98%);
+
+    --font-family-sans: 'Poppins', sans-serif;
+    --font-size-400: 0.9375rem;
+    --font-size-500: 1.25rem;
+    --font-size-600: 1.625rem;
+    --font-size-900: 2.5rem;
+    --font-light: 200;
+    --font-normal: 400;
+    --font-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-normal);
+    line-height: 1.7;
+    margin: 0;
+    padding-block-end: 5rem;
+    background-color: var(--secondary-very-light-gray);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--secondary-very-dark-blue);
+}
+
+h1 {
+    font-weight: var(--font-light);
+    font-size: var(--font-size-900);
+}
+
+h1 span {
+    font-weight: var(--font-bold);
+}
+
+header>p {
+    font-size: var(--font-size-500);
+}
+
+.wrapper {
+    padding-inline: 2rem;
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.wrapper--narrow {
+    max-width: 640px;
+}
+
+header {
+    text-align: center;
+    margin-block: 6rem;
+}
+
+.layout-grid {
+    --gap: 2rem;
+    display: grid;
+    gap: var(--gap);
+}
+
+@media (min-width: 800px) {
+    .layout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.layout-grid>* {
+    flex: 1;
+}
+
+.col {
+    /* display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    justify-content: center; */
+
+    display: grid;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.card {
+    --br: 0.324rem;
+    padding: 2rem;
+    border-top: var(--br) solid;
+    border-radius: var(--br);
+    box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
+}
+
+.border-cyan {
+    border-color: var(--primary-cyan);
+}
+
+.border-red {
+    border-color: var(--primary-red);
+}
+
+.border-orange {
+    border-color: var(--primary-orange);
+}
+
+.border-blue {
+    border-color: var(--primary-blue);
+}
+
+.card>h2 {
+    font-size: var(--font-size-600);
+    margin: 0;
+}
+
+.card>img {
+    display: block;
+    margin-top: 2rem;
+    margin-left: auto;
+}
